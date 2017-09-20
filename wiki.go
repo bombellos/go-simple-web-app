@@ -21,7 +21,7 @@ type Page struct {
 
 func (p *Page) save() error {
 	filename := p.Title + ".txt"
-	return ioutil.WriteFile(filename, p.Body, 0600)
+	return ioutil.WriteFile(DATA_PATH + filename, p.Body, 0600)
 }
 
 func loadPage(title string) (*Page, error) {
